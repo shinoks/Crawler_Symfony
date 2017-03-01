@@ -1,0 +1,42 @@
+<?php
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
+
+/**
+ * @ORM\Entity
+ */
+class ItemsPkt 
+{
+    /**
+     * @ORM\Id;
+     * @ORM\Column(type="integer")
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    protected $id;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    protected $telephone;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    protected $name;
+    
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    protected $email;
+
+
+    /**
+     * @ORM\ManyToOne(targetEntity="CategoriesPkt", inversedBy="items")
+     * @ORM\JoinColumn(name="categories_id", referencedColumnName="id")
+     */
+    protected $categories;
+
+
+}

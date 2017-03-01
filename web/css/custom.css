@@ -1,0 +1,407 @@
+.imageLight{
+    opacity: 0.5;
+}
+
+.site{
+    background: #fff;
+    padding: 0 15px;
+}
+.head{
+    padding-top: 52px;
+}
+.menu{
+    top: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+}
+.menu-fixed{
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    right: 0;
+    left: 0;
+    margin: auto;
+}
+.menu-shadow{
+    -webkit-box-shadow: 0px 2px 2px -1px rgba(0,0,0,0.47);
+    -moz-box-shadow: 0px 2px 2px -1px rgba(0,0,0,0.47);
+    box-shadow: 0px 2px 2px -1px rgba(0,0,0,0.47);
+}
+.article-shadow{
+    -webkit-box-shadow: 0px 0px 10px -1px rgba(0,0,0,0.31);
+    -moz-box-shadow: 0px 0px 10px -1px rgba(0,0,0,0.31);
+    box-shadow: 0px 0px 10px -1px rgba(0,0,0,0.31);
+}
+.carousel{
+    
+}
+.companySlogan{
+    font-size: 12px;
+}
+
+.width-full{
+    width: 100%;
+}
+.width-900px{
+    width: 900px;
+    margin: auto;
+}
+.width-800px{
+    width: 800px;
+    margin: auto;
+}
+.width-700px{
+    width: 700px;
+    margin: auto;
+}
+.width-600px{
+    width: 600px;
+    margin: auto;
+}
+.width-500px{
+    width: 500px;
+    margin: auto;
+}
+.width-400px{
+    width: 400px;
+    margin: auto;
+}
+.width-300px{
+    width: 300px;
+    margin: auto;
+}
+.footer{
+    background:#464646;
+    text-align:center;
+    color: #a6a6a6;
+    padding: 20px 0;
+    font-size: 12px;
+    position: relative;
+    width: 100%;
+    z-index:12;
+}
+.footer a{
+    color: #fff;
+    text-decoration:none;
+}
+
+.articleDate{
+    float: right;
+    font-size: 12px;
+    color: #a6a6a6;
+    padding-right: 15px;
+    padding-top: 10px;
+}
+.overlay{
+   background:transparent; 
+   z-index:10;
+}
+html { 
+
+}
+  
+body{
+    min-height:800px;
+    font-family: 'Pavanam', sans-serif;
+}
+
+.h1Decor{
+    font-size: 45px;
+    font-weight:bold;
+     /* WebKit (Safari/Chrome) Only */
+  -webkit-text-stroke: 1px black;
+  
+  /* If we weren't using text-shadow, we'd set a fallback color
+     and use this to set color instead
+    -webkit-text-fill-color: white; */
+  
+  text-shadow:
+    3px 3px 0 #fff,
+    /* Simulated effect for Firefox and Opera
+       and nice enhancement for WebKit */
+   -1px -1px 0 #fff,  
+    1px -1px 0 #fff,
+   -1px  1px 0 #fff,
+    1px  1px 0 #fff;
+}
+
+.displayNone{
+    display:none;
+}
+.bottomMenu {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    border-top: 1px solid #000;
+    background: red;
+    z-index: 1;
+}
+.scrollPast {
+    width: 100%;
+    height: 150px;
+    background:blue;
+    position: relative;
+    top: 50px;
+    margin: 20px 0;
+}
+.well{
+    z-index: 10;
+    background-color: rgba(255,255,255,0.9);
+}
+
+.cont{
+    z-index:10;
+    margin-right: auto;
+    margin-left: auto;
+}
+.co {
+    position:relative;
+    padding-top:10px;
+}
+
+.leftBow{
+    width: 50%;
+    padding: 35px;
+    height: 100%;
+    background-color: #efefef;
+    opacity: 0.9;
+    left: 0px;
+    position:absolute;
+}
+.rightBow{
+    width: 50%;
+    padding: 35px;
+    height: 100%;
+    background-color: #efefef;
+    opacity: 0.9;
+    right:0px;
+    position:absolute;
+}
+.centerBow{
+    width: 100%;
+    padding: 35px;
+    height: 100%;
+    opacity: 0.9;
+    margin:0px;
+    position:absolute;
+    text-align:center;
+}
+.parralex{
+    margin-right: auto;
+    margin-left: auto;
+    position:absolute;
+    width:100%;
+    height:100%;
+}
+
+.bgnd {
+    background-attachment: fixed;
+    background-position: 50% 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    max-height: 1200px;
+    min-height: 200px;
+
+}
+.bgnd-1 {
+    background-image: url(../images/1.jpg);
+}
+ 
+.bgnd-2 {
+    background-image: url(../images/2.jpg);
+}
+ 
+.bgnd-3 {
+    background-image: url(../images/3.jpg);
+}
+.bgnd-4 {
+    background-image: url(../images/4.jpg);
+}
+.bgnd-5 {
+    background-image: url(../images/1.jpg);
+}
+
+header + .bgnd {
+    height: 86vh;
+}
+
+.view {
+   width: 300px;
+   height: 200px;
+   margin: 10px;
+   float: left;
+   border: 10px solid #fff;
+   overflow: hidden;
+   position: relative;
+   text-align: center;
+   -webkit-box-shadow: 1px 1px 2px #e6e6e6;
+   -moz-box-shadow: 1px 1px 2px #e6e6e6;
+   box-shadow: 1px 1px 2px #e6e6e6;
+   cursor: default;
+   background: #fff url(../images/bgimg.jpg) no-repeat center center;
+}
+.view .mask,.view .content {
+   width: 300px;
+   height: 200px;
+   position: absolute;
+   overflow: hidden;
+   top: 0;
+   left: 0;
+}
+.view img {
+   display: block;
+   position: relative;
+}
+.view h2 {
+   text-transform: uppercase;
+   color: #fff;
+   text-align: center;
+   position: relative;
+   font-size: 17px;
+   padding: 10px;
+   background: rgba(0, 0, 0, 0.8);
+   margin: 20px 0 0 0;
+}
+.view p {
+   font-family: Georgia, serif;
+   font-style: italic;
+   font-size: 12px;
+   position: relative;
+   color: #fff;
+   padding: 10px 20px 20px;
+   text-align: center;
+}
+.view a.info {
+   display: inline-block;
+   text-decoration: none;
+   padding: 7px 14px;
+   background: #000;
+   color: #fff;
+   text-transform: uppercase;
+   -webkit-box-shadow: 0 0 1px #000;
+   -moz-box-shadow: 0 0 1px #000;
+   box-shadow: 0 0 1px #000;
+}
+.view a.info: hover {
+   -webkit-box-shadow: 0 0 5px #000;
+   -moz-box-shadow: 0 0 5px #000;
+   box-shadow: 0 0 5px #000;
+}
+.view-tenth img {
+   -webkit-transform: scaleY(1);
+   -moz-transform: scaleY(1);
+   -o-transform: scaleY(1);
+   -ms-transform: scaleY(1);
+   transform: scaleY(1);
+   -webkit-transition: all 0.7s ease-in-out;
+   -moz-transition: all 0.7s ease-in-out;
+   -o-transition: all 0.7s ease-in-out;
+   -ms-transition: all 0.7s ease-in-out;
+   transition: all 0.7s ease-in-out;
+}
+.view-tenth .mask {
+   background-color: rgba(255, 231, 179, 0.3);
+   -webkit-transition: all 0.5s linear;
+   -moz-transition: all 0.5s linear;
+   -o-transition: all 0.5s linear;
+   -ms-transition: all 0.5s linear;
+   transition: all 0.5s linear;
+   -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";
+   filter: alpha(opacity=0);
+   opacity: 0;
+}
+.view-tenth h2 {
+   border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+   background: transparent;
+   margin: 20px 40px 0px 40px;
+   -webkit-transform: scale(0);
+   -moz-transform: scale(0);
+   -o-transform: scale(0);
+   -ms-transform: scale(0);
+   transform: scale(0);
+   color: #333;
+   -webkit-transition: all 0.5s linear;
+   -moz-transition: all 0.5s linear;
+   -o-transition: all 0.5s linear;
+   -ms-transition: all 0.5s linear;
+   transition: all 0.5s linear;
+   -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";
+   filter: alpha(opacity=0);
+   opacity: 0;
+}
+.view-tenth p {
+   color: #333;
+   -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";
+   filter: alpha(opacity=0);
+   opacity: 0;
+   -webkit-transform: scale(0);
+   -moz-transform: scale(0);
+   -o-transform: scale(0);
+   -ms-transform: scale(0);
+   transform: scale(0);
+   -webkit-transition: all 0.5s linear;
+   -moz-transition: all 0.5s linear;
+   -o-transition: all 0.5s linear;
+   -ms-transition: all 0.5s linear;
+   transition: all 0.5s linear;
+}
+.view-tenth a.info {
+   -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";
+   filter: alpha(opacity=0);
+   opacity: 0;
+   -webkit-transform: scale(0);
+   -moz-transform: scale(0);
+   -o-transform: scale(0);
+   -ms-transform: scale(0);
+   transform: scale(0);
+   -webkit-transition: all 0.5s linear;
+   -moz-transition: all 0.5s linear;
+   -o-transition: all 0.5s linear;
+   -ms-transition: all 0.5s linear;
+   transition: all 0.5s linear;
+}
+.view-tenth:hover img {
+   -webkit-transform: scale(10);
+   -moz-transform: scale(10);
+   -o-transform: scale(10);
+   -ms-transform: scale(10);
+   transform: scale(10);
+   -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";
+   filter: alpha(opacity=0);
+   opacity: 0;
+}
+.view-tenth:hover .mask {
+   -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=100)";
+   filter: alpha(opacity=100);
+   opacity: 1;
+}
+.view-tenth:hover h2,.view-tenth:hover p,.view-tenth:hover a.info {
+   -webkit-transform: scale(1);
+   -moz-transform: scale(1);
+   -o-transform: scale(1);
+   -ms-transform: scale(1);
+   transform: scale(1);
+   -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=100)";
+   filter: alpha(opacity=100);
+   opacity: 1;
+}
+
+.font12{
+    font-size: 12px;
+}
+.font11{
+    font-size: 11px;
+}
+.font10{
+    font-size: 10px;
+}
+.font9{
+    font-size: 9px;
+}
+.deco{
+    text-decoration:none
+}

@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+{% block head %}
+    <meta http-equiv="refresh" content="5; url=http://crawlersymfony.dev/itemspkt_download">
+{% endblock %}
+
+{% block body %}
+    <h1>Pobrane wpisy</h1>
+    Nr kategorii: {{category.id}} z {{categoryCount}}<br/>
+    Nazwa kategorii: {{category.name}} <br/>
+    Nr strony: {{page}}<br/>
+    <br/>
+    {% for item in items %}
+        {{ item.name }} - {{ item.tele }} - {{ item.email }} <br/>
+    {% endfor %}
+    
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+{% block head %}
+    <meta http-equiv="refresh" content="5; url=http://crawlersymfony.dev/categoriespkt_download">
+{% endblock %}
+
+{% block body %}
+    <h1>Pobrane kategorie</h1>
+    Aktualny adres:{{address}}<br/>
+    Aktualna litera: {{letter}}<br/>
+    Aktualna strona: {{page}}<br/>
+    
+    <br/><br/>
+    {{data|raw}}
+{% endblock %}
+

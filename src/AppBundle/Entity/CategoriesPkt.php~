@@ -1,0 +1,45 @@
+<?php
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * @ORM\Entity
+ */
+class CategoriesPkt
+{
+    /**
+     * @ORM\Id;
+     * @ORM\Column(type="integer")
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    protected $id;
+
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    protected $name;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    protected $address;
+
+    /**
+     * @ORM\Column(type="boolean")
+     */
+    protected $downloaded;
+    
+    /**
+     * @ORM\Column(type="integer")
+     */
+    protected $page;
+
+    /**
+     * @ORM\OneToMany(targetEntity="ItemsPkt", mappedBy="categories")
+     * @ORM\JoinColumn(name="items_id", referencedColumnName="id")
+     */
+    protected $items;
+
+}
