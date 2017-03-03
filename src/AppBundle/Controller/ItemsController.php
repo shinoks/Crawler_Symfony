@@ -11,6 +11,7 @@ use Goutte\Client;
 use AppBundle\Utils\ItemsUtils;
 use AppBundle\Utils\CategoriesUtils;
 use Symfony\Component\DomCrawler\Crawler;
+use Symfony\Component\BrowserKit\Response;
 
 class ItemsController extends Controller
 {
@@ -19,20 +20,23 @@ class ItemsController extends Controller
      */
     public function categoriesAction()
     {
-        $items = $this->getDoctrine()
-            ->getRepository('AppBundle:items')
-            ->findAll();
-
-        if (!$items) {
-            throw $this->createNotFoundException(
-                'No items were found '
-            );
-        }
+        $html = ''; 
         
+        $em = $this->getDoctrine()->getManager();
+        $q =$em->createQuery('SELECT u from AppBundle\Entity\Items u ');
+        $iterableResult = $q->iterate();
+        
+        foreach ($iterableResult as $row) {
+            $file = 'items/bazafirm/baza-firm-'.$row[0]->getCategories()->getName().'.csv';
+            $html = $row[0]->getName().';'.$row[0]->getTelephone().';'.$row[0]->getEmail().';'."\r\n";
+            file_put_contents($file, $html, FILE_APPEND | LOCK_EX);
+            $em->detach($row[0]);
+            $cat =['name'=>$row[0]->getCategories()->getName(),'file'=>'items/bazafirm/baza-firm-'.$row[0]->getCategories()->getName().'.csv'];
+        }
         
         return $this->render('default/items.html.twig', [
             'base_dir' => realpath($this->getParameter('kernel.root_dir').'/..').DIRECTORY_SEPARATOR,
-            'items'=>$items,
+            'cat'=>$cat,
         ]);
     }
     
@@ -149,6 +153,5 @@ class ItemsController extends Controller
             ]);
          }
      }
-    
-    
+     
 }

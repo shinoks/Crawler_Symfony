@@ -102,7 +102,10 @@ class ItemsPktController extends Controller
                 $email = $craww->filter('.trkname_clickemail')->extract(array('data-expanded'));
                 
                 if(isset($tele[0])){
-                    $items->setName($name[0]);
+                    $nam = str_replace('                    ','',$name[0]);
+                    $nam = str_replace('                ','',$name[0]);
+                    $nam = str_replace('  ','',$name[0]);
+                    $items->setName($nam);
                     $items->setTelephone($tele[0]);
                     (isset($email[0]))?$items->setEmail($email[0]):'';
                     

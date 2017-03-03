@@ -37,12 +37,11 @@ class Categories
     protected $page;
 
     /**
-     * @ORM\OneToMany(targetEntity="Categories", mappedBy="categories")
+     * @ORM\OneToMany(targetEntity="Items", mappedBy="categories")
      * @ORM\JoinColumn(name="items_id", referencedColumnName="id")
      */
     protected $items;
-
-
+    
     /**
      * Constructor
      */

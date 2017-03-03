@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Pobrane wpisy</h1>
+    Nr kategorii: {{category.id}} z {{categoryCount}}<br/>
+    Nazwa kategorii: {{category.name}} <br/>
+    Nr strony: {{page}}<br/>
+    <br/>
+    <table class="table table-bordered">
+    <tr>
+        <td>Lp.</td>
+        <td>Nazwa kategorii</td>
+        <td>Pobierz plik</td>
+    </tr>
+    {% set i = 1 %}
+    {% for category in cat %}
+        <tr>
+            <td>{{i}}</td>
+            <td>{{category.name}}</td>
+            <td><a href="{{category.file}}" class="btn btn-default">Pobierz</a></td>
+        </tr>
+        {% set i = i+1 %}
+    {% endfor %}
+{% endblock %}
